@@ -58,6 +58,9 @@ img {
 }
 
 .dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 13px;
     width: 13px;
     border-radius: 50%;

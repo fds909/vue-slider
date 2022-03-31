@@ -23,12 +23,11 @@
                         <i class="fa-solid fa-angle-left"></i>
                     </a>
                     <div class="img-frame">
-                        <img v-bind:src="images[currentImage]" alt="">
+                        <img v-bind:src="images[currentImage]" alt="Landscape">
                         <div class="img-selector">
-                            <a href="#" class="dot selected" id="dot-1"></a>
-                            <a href="#" class="dot" id="dot-2"></a>
-                            <a href="#" class="dot" id="dot-3"></a>
-                            <a href="#" class="dot" id="dot-4"></a>
+                            <a href="#" class="dot" v-for="(image, index) in images">
+                                <div class="dot selected" v-if="(index == currentImage)"></div>
+                            </a>
                         </div>
                     </div>
                     <a href="#" id="arrow-right" @click="nextImage()">
