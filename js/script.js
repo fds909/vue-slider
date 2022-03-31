@@ -39,6 +39,9 @@ var app = new Vue (
                 } else {
                     this.currentImage--;
                 }
+            },
+            selectImage: function(index) {
+                this.currentImage = index;
             }
         },
         created: function() {
