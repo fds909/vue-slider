@@ -25,8 +25,8 @@
                     <div class="img-frame">
                         <img v-bind:src="images[currentImage]" alt="Landscape">
                         <div class="img-selector">
-                            <a href="#" class="dot" v-for="(image, index) in images" @click="selectImage(index)">
-                                <div class="dot selected" v-if="(index == currentImage)"></div>
+                            <a href="#" :class="(index == currentImage) ? 'dot selected' : 'dot'"
+                                v-for="(image, index) in images" @click="selectImage(index)">
                             </a>
                         </div>
                     </div>
